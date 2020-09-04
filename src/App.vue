@@ -1,6 +1,6 @@
 <template>
     <div>
-       <SearchBar v-on:termChange="onTermChange"></SearchBar>
+       <SearchBar @termChange="onTermChange"></SearchBar>
        <VideoList></VideoList>
     </div>
 </template>
@@ -26,11 +26,11 @@ export default {
      onTermChange (searchTerm) {
          axios
           .get('http://www.googleapis.com/youtube/v3/search', {
-           params: {
+            params: {
                key: API_KEY,
                type: 'video',
                part: 'snippet',
-               q : searchTerm
+               q: searchTerm
            }
        })
        .then (response => {
