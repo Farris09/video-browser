@@ -1,16 +1,19 @@
 <template>
     <ul>
-        VideoList
-        {{videos}}
+       VideoList
+       {{ videos.lenght }}
     </ul>
 </template>
 
 <script>
+import VideoListItem from './VideoListItem';
+
 export default {
     name: 'VideoList',
-    props:{
-        videos: Array
-    }
+    components: {
+        VideoListItem
+    },
+    props: ['videos']
 };
 </script>
 
