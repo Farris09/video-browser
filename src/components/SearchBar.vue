@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input @input="onInput" />
+        <input @keyup.enter="onInput" placeholder="Search Video" />
     </div>
 </template>
 
