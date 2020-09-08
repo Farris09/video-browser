@@ -1,11 +1,11 @@
 <template>
-    <li>
-        VideoListItem
-    </li>
+  <li>
+    VideoListItem
+  </li> 
 </template>
 
 <script>
 export default {
-   name: 'VideoListItem' 
+  name: 'VideoListItem'  
 };
 </script>

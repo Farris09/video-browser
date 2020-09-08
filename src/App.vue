@@ -20,7 +20,7 @@ export default {
      VideoList
  },
  data() {
-     return{ videos: [] };
+     return { videos: [] };
  },
  methods: {
      onTermChange (searchTerm) {
