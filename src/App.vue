@@ -1,7 +1,8 @@
 <template>
     <div class="container">
        <SearchBar @termChange="onTermChange"></SearchBar>
-       <VideoList :videos="videos"></VideoList>
+       <VideoDetail :video="selectedVideo" />
+       <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
     </div>
 </template>
 
@@ -15,12 +16,17 @@ export default {
  name: 'App',
  components: {
      SearchBar,
-     VideoList
+     VideoList,
+     // eslint-disable-next-line no-undef
+     VideoDetail
  },
  data() {
-     return { videos: [] };
+     return { videos: [], selectedVideo: null };
  },
  methods: {
+     onVideoSelect(video){
+         this.selectedVideo = video;
+     },
      onTermChange (searchTerm) {
          axios
           .get('https://www.googleapis.com/youtube/v3/search', {
