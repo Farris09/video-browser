@@ -1,6 +1,6 @@
 <template>
   <li class="list-group-item media">
-    <img class="mr-5" :src = "thumbnailUrl" />
+    <img class="mr-3" :src = "thumbnailUrl" />
     <div class="media-body">
       {{video.snippet.title}}
     </div>
