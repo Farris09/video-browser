@@ -17,7 +17,6 @@ export default {
  components: {
      SearchBar,
      VideoList,
-     // eslint-disable-next-line no-undef
      VideoDetail
  },
  data() {
